@@ -1,7 +1,7 @@
 
 import React, {JSX} from 'react';
 import styles from './styles.module.scss';
-import classNames from "../../utils/classNames";
+import classNames from "../../../utils/classNames";
 import ModifierType from "./modifierType";
 
 interface Props {

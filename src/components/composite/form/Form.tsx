@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Modal from "../../base/modal/Modal";
 import Input from "../../base/input/Input";
-import Button from "../../button/Button";
-import Typography from "../../typography/Typography";
+import Button from "../../base/button/Button";
+import Typography from "../../base/typography/Typography";
 import styles from './styles.module.scss'
 interface Props {
     isOpen: boolean

@@ -1,7 +1,7 @@
 import React from 'react';
-import Typography from "../../components/typography/Typography";
+import Typography from "../../components/base/typography/Typography";
 import styles from './styles.module.scss'
-import Icon from "../../components/icon/Icon";
+import Icon from "../../components/base/icon/Icon";
 import Photo from '../../assets/icons/Photo.png'
 import { infoList} from "./common";
 

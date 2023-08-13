@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import styles from './styles.module.scss'
-import Icon from "../../icon/Icon";
-import Button from "../../button/Button";
+import Icon from "../../base/icon/Icon";
+import Button from "../../base/button/Button";
 import AuthService from "../../../sevices/authService";
 import Form from "../form/Form";
 import toast from 'react-hot-toast';
 import {useNavigate} from "react-router-dom";
+import {IUser} from "../../../interface/user";
 interface Props {
     isAuth: boolean
-    setAuthData: (isAuth: boolean, accessToken: string) => void
+    setAuthData: (isAuth: boolean, accessToken: string, user: IUser) => void
 }
 
 
@@ -23,7 +24,7 @@ const Header = ({isAuth, setAuthData}:Props) => {
                 toast.error(response.data.message)
                 return;
             }
-            setAuthData(true, response.data.accessToken)
+            setAuthData(true, response.data.accessToken, response.data.user)
             navigate('blog')
             setIsShowRegistrationModal(false)
         } catch (e) {
@@ -38,7 +39,7 @@ const Header = ({isAuth, setAuthData}:Props) => {
                 toast.error(response.data.message)
                 return;
             }
-            setAuthData(false, '')
+            setAuthData(false, '', {} as IUser)
             navigate('/')
         } catch (e) {
             console.log(e)
@@ -52,7 +53,7 @@ const Header = ({isAuth, setAuthData}:Props) => {
                 toast.error(response.data.message)
                 return;
             }
-            setAuthData(true, response.data.accessToken)
+            setAuthData(true, response.data.accessToken, response.data.user)
             navigate('blog')
             setIsShowLoginModal(false)
         } catch (e) {

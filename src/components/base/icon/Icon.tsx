@@ -3,7 +3,7 @@ import React from 'react';
 
 import type ModifierType from './modifierType';
 import styles from './styles.module.scss';
-import classNames from "../../utils/classNames";
+import classNames from "../../../utils/classNames";
 import {Variant} from "./type";
 
 interface Props {
@@ -17,7 +17,7 @@ const Icon = ({ variant, modifier, className, onClick }: Props): React.ReactElem
   <img
       onClick={onClick}
     alt={` `}
-    src={require(`../../assets/icons/${variant}.svg`)}
+    src={require(`../../../assets/icons/${variant}.svg`)}
     className={classNames(styles, 'Icon', modifier, className, [onClick ? 'pointer': ''])}
   />
 );

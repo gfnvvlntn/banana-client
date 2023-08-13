@@ -1,7 +1,7 @@
 import React from 'react';
 import {createPortal} from "react-dom";
 import styles from './styles.module.scss'
-import Icon from "../../icon/Icon";
+import Icon from "../icon/Icon";
 interface Props {
     children: React.ReactElement | React.ReactElement[]
     isOpen: boolean

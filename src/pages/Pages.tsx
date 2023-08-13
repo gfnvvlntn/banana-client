@@ -6,16 +6,18 @@ import Blog from "./Blog/Blog";
 import styles from './styles.module.scss'
 import {Toaster} from "react-hot-toast";
 import useLocalStorage from "../hooks/use-localStorage";
+import {IUser} from "../interface/user";
 
 const Pages = () => {
     const [isAuth, setIsAuth] = useLocalStorage('isAuth');
     const [authToken, setAuthToken] = useLocalStorage('authToken');
+    const [user, setUser] = useLocalStorage('user');
 
-    console.log(authToken)
 
-    const setAuthData = (isAuth: boolean, accessToken: string):void => {
+    const setAuthData = (isAuth: boolean, accessToken: string, user: IUser):void => {
         setAuthToken(accessToken);
         setIsAuth(isAuth);
+        setUser(user)
     }
 
     return (

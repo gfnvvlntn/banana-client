@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 import type ModifierType from './modifierType';
-import classNames from "../../utils/classNames";
+import classNames from "../../../utils/classNames";
 
 interface Props {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;

@@ -1,9 +1,37 @@
-import React from 'react';
-import Typography from "../../../../components/typography/Typography";
+import React, {useState} from 'react';
+import Typography from "../../../../components/base/typography/Typography";
 import styles from './styles.module.scss'
-import Selector from "../../../../components/selector/Selector";
-import Button from "../../../../components/button/Button";
+import Button from "../../../../components/base/button/Button";
+import Input from "../../../../components/base/input/Input";
+import toast from "react-hot-toast";
+import useLocalStorage from "../../../../hooks/use-localStorage";
+import FeedbackService from "../../../../sevices/feedbackService";
+
 const Lesson = () => {
+    const [inputValue, setInputValue] = useState('')
+    const [user, setUser] = useLocalStorage('user');
+
+    const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInputValue(e.target.value)
+    }
+
+    const sendFeedback = async () => {
+        if (!inputValue) {
+            toast.error('Напишите отзыв')
+            return
+        }
+        try {
+            const response = await FeedbackService.sendFeedback(user?.id, inputValue);
+            if (response.data.error) {
+                toast.error(response.data.message)
+                return;
+            }
+            setUser(response.data.user)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
     return (
         <div className={styles.Container}>
             <div className={styles.LessonTitle}>
@@ -12,18 +40,21 @@ const Lesson = () => {
             </div>
             <div className={styles.Lesson}>
                 <div className={styles.Video}/>
-                <Typography modifier={'H1'}>Как тебе этот урок?</Typography>
-                <Typography modifier={'Text1'}>Поделись своими эмоциями - так я смогу улучшить свою работу. Что ты <br/> чувствуешь после урока?</Typography>
-                <div className={styles.FidBackList}>
-                    <Selector iconVariant={'emoji-anxiety'} isSelected={false}>Вдохновение и идеи</Selector>
-                    <Selector iconVariant={'emoji-anxiety'} isSelected={false}>Удовлетворение</Selector>
-                    <Selector iconVariant={'emoji-anxiety'} isSelected={false}>Уверенность</Selector>
-                    <Selector iconVariant={'emoji-anxiety'} isSelected={true}>Разочарование</Selector>
-                    <Selector iconVariant={'emoji-anxiety'} isSelected={false}>Замешательство</Selector>
-                    <Selector iconVariant={'emoji-anxiety'} isSelected={false}>Беспокойство</Selector>
-
-                </div>
-                <Button modifier={'yellow'} className={styles.Button}>Отправить фидбек</Button>
+                {user.feedback ?
+                    <>
+                        <Typography modifier={'H1'}>Ты просто супер!</Typography>
+                        <Typography modifier={'Text1'}>Отслеживание эмоций в процессе обучения очень помогает. Спасибо, что не <br/> пропускаешь этот этап!</Typography>
+                    </>
+                    :
+                    <>
+                        <Typography modifier={'H1'}>Как тебе этот урок?</Typography>
+                        <Typography modifier={'Text1'}>Поделись своими эмоциями - так я смогу улучшить свою работу. Что ты <br/> чувствуешь после урока?</Typography>
+                        <div className={styles.FeedbackForm}>
+                            <Input placeholder={'Напишите свой отзыв'} value={inputValue} onChange={onChangeInput}/>
+                            <Button onClick={sendFeedback} modifier={'yellow'}>Отправить отзыв</Button>
+                        </div>
+                    </>
+                }
             </div>
         </div>
     );

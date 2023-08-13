@@ -25,13 +25,9 @@
   height: 384px;
 }
 
-.FidBackList {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+.FeedbackForm {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
-.Button {
-  width: 300px;
-}
