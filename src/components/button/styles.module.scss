@@ -1,0 +1,56 @@
+
+.Button {
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  transition: background 0.16s linear, color 0.16s linear;
+  -webkit-transition: background 0.16s linear, color 0.16s linear;
+  margin: 0;
+  border-radius: 8px;
+  padding: 12px 32px;
+  height: 48px;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--yellow);
+
+  &:hover {
+    color: var(--black);
+    border: 1px solid var(--yellow-dark);
+    background-color: var(--yellow-dark);
+  }
+
+  &:active {
+    color: var(--black);
+    border: 1px solid var(--yellow-dark);
+    background-color: var(--yellow-dark);
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    cursor: default;
+  }
+}
+
+.--yellow {
+  color: var(--black);
+  background-color: var(--yellow);
+
+  &:hover {
+    color: var(--black);
+    background-color: var(--yellow-dark);
+  }
+
+  &:active {
+    color: var(--black);
+    background-color: var(--yellow-dark);
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    cursor: default;
+  }
+}

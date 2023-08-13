@@ -1,0 +1,37 @@
+
+.Container {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 515px 732px;
+  grid-column-gap: 24px;
+}
+
+.LessonTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.Lesson {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.Video {
+  background-color: lightgray;
+  border: 1px solid var(--yellow);
+  border-radius: 8px;
+  height: 384px;
+}
+
+.FidBackList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.Button {
+  width: 300px;
+}

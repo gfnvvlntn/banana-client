@@ -1,0 +1,35 @@
+
+.Container {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+}
+
+.Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 132px;
+}
+
+.Description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.DescriptionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.Photos {
+  display: flex;
+  gap: 24px;
+}
+
+.Photo {
+  width: 300px;
+  height: 360px;
+}

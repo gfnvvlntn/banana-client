@@ -1,0 +1,40 @@
+
+.Container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.Background {
+  background-color: var(--black);
+  opacity: 0.7;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 2s;
+  display: flex;
+  align-items: center;
+}
+
+.Content {
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 30px 50px;
+  z-index: 1000;
+  border-radius: 8px;
+  border: 1px solid var(--yellow);
+  position: relative;
+}
+
+.Close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
