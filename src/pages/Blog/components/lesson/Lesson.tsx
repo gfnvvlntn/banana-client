@@ -21,7 +21,7 @@ const Lesson = () => {
             return
         }
         try {
-            const response = await FeedbackService.sendFeedback(user?.id, inputValue);
+            const response = await FeedbackService.sendFeedback(user?.email, inputValue);
             if (response.data.error) {
                 toast.error(response.data.message)
                 return;

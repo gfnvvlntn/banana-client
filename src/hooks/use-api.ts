@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const BASE_URL = `http://212.60.20.101/api`
+export const BASE_URL = `http://banana-everywhere.ru/api`
 
 const api = axios.create({
     withCredentials: true,
