@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d53dc6e.css",
+    "main.js": "/static/js/main.258d6952.js",
+    "static/media/ArialMT.ttf": "/static/media/ArialMT.74d06c0a3e4f4e826295.ttf",
+    "static/media/Photo.png": "/static/media/Photo.334ed11c60b55a813ebe.png",
+    "static/media/emoji-anxiety.svg": "/static/media/emoji-anxiety.2a6726d943dfade35a54.svg",
+    "static/media/emoji-disappointment.svg": "/static/media/emoji-disappointment.abcdef2b3b38709284c7.svg",
+    "static/media/emoji-satisfaction.svg": "/static/media/emoji-satisfaction.342573fd245432087bed.svg",
+    "static/media/emoji-confusion.svg": "/static/media/emoji-confusion.4e1a4c389f84ce550088.svg",
+    "static/media/emoji-inspiration.svg": "/static/media/emoji-inspiration.99a2a222f295c4a44b17.svg",
+    "static/media/emoji-confidence.svg": "/static/media/emoji-confidence.3160948fbd41fd5b76bc.svg",
+    "static/media/logo.svg": "/static/media/logo.c923bf786c215ec4f000.svg",
+    "index.html": "/index.html",
+    "static/media/close.svg": "/static/media/close.337e0a75f496c0173d79.svg",
+    "static/media/chevron-circle-right.svg": "/static/media/chevron-circle-right.8f5548ef4abd56aae527.svg",
+    "static/media/ArialMT.eot": "/static/media/ArialMT.31d6cfe0d16ae931b73c.eot",
+    "static/media/ArialMT.woff": "/static/media/ArialMT.31d6cfe0d16ae931b73c.woff",
+    "main.5d53dc6e.css.map": "/static/css/main.5d53dc6e.css.map",
+    "main.258d6952.js.map": "/static/js/main.258d6952.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d53dc6e.css",
+    "static/js/main.258d6952.js"
+  ]
+}
