@@ -2,7 +2,8 @@ import React from 'react';
 import Typography from "../../components/base/typography/Typography";
 import styles from './styles.module.scss'
 import Icon from "../../components/base/icon/Icon";
-import Photo from '../../assets/icons/Photo.png'
+import Photo1 from '../../assets/image/photo1.jpg'
+import Photo2 from '../../assets/image/photo2.jpg'
 import { infoList} from "./common";
 
 
@@ -19,13 +20,13 @@ const Home = ():React.ReactElement => {
                     {infoList.map((info, index) => (
                         <div key={index} className={styles.DescriptionItem}>
                         <Icon variant={'chevron-circle-right'} modifier={"size24"}/>
-                        <Typography modifier={'Text2'}>{info}</Typography>
+                        <Typography modifier={'Text1'}>{info}</Typography>
                         </div>
                     ))}
                 </div>
                 <div className={styles.Photos}>
-                    <img className={styles.Photo} src={Photo} alt=""/>
-                    <img className={styles.Photo} src={Photo} alt=""/>
+                    <img className={styles.Photo} src={Photo1} alt="фото в старших классах"/>
+                    <img className={styles.Photo} src={Photo2} alt="последнее селфи"/>
                 </div>
             </div>
         </div>

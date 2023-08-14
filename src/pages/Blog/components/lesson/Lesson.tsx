@@ -35,11 +35,22 @@ const Lesson = () => {
     return (
         <div className={styles.Container}>
             <div className={styles.LessonTitle}>
-                <Typography  modifier={'H1'}>Пользовательские <br/>CSS-свойства: <br/>CSS-переменные</Typography>
-                <Typography modifier={'Text1'}>В JavaScript-мире препроцессоры CSS (вроде Sass, Less и Stylus) — это очень полезные и популярные технологии. Препроцессоры расширяют возможности CSS, позволяя пользоваться, например, переменными и функциями. Но современным веб-дизайнерам доступны мощные стандартные возможности CSS, известные как пользовательские CSS-свойства или CSS-переменные.</Typography>
+                <Typography  modifier={'H1'}>Пользовательские <br/>свойства: <br/>CSS-переменные</Typography>
+                <Typography modifier={['Text1', 'justify']}>В мире программирования, переменные неотъемлемая часть и трудно представить как бы мы разрабатывали приложения без них. К удивление переменные в css  появились относительно недавно, хотя потребность в них была всегда. В этом видео мы поговорим не только об очевидных достоинствах “пользовательских свойств”, но и о том как они изменили разработку.</Typography>
             </div>
             <div className={styles.Lesson}>
-                <div className={styles.Video}/>
+                <div className={styles.Video}>
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://play.boomstream.com/n02XXHVR?title=0"
+                        title="Переменные"
+                        frameBorder="0"
+                        scrolling="no"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                </div>
                 {user.feedback ?
                     <>
                         <Typography modifier={'H1'}>Ты просто супер!</Typography>

@@ -65,7 +65,7 @@ const Header = ({isAuth, setAuthData}:Props) => {
         <div className={styles.Container}>
             <Form onSubmit={onRegistration}  isOpen={isShowRegistrationModal} onClose={() => setIsShowRegistrationModal(false)} action={'Регистрация'}/>
             <Form onSubmit={onLogin} isOpen={isShowLoginModal} onClose={() => setIsShowLoginModal(false)} action={'Войти'}/>
-            <Icon variant={'logo'} modifier={"size44"}/>
+            <a href="https://practicum.yandex.ru/" target={"_blank"} rel="noreferrer"><Icon variant={'logo'} modifier={"size44"}/></a>
             <div className={styles.ActionContainer}>
                 {
                     isAuth ? (

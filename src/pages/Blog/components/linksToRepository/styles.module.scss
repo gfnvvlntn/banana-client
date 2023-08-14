@@ -2,8 +2,19 @@
 .Container {
   display: flex;
   gap: 32px;
+  justify-content: space-between;
+}
+.LinkList {
+  display: flex;
+  gap: 32px;
 }
 
-.Button {
-  width: 350px;
+.LinkItem {
+  background-color: var(--yellow);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.Link {
+  color: var(--black);
 }

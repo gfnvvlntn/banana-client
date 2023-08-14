@@ -31,5 +31,7 @@
 
 .Photo {
   width: 300px;
-  height: 360px;
+  height: 400px;
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
 }

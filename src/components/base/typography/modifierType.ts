@@ -1,5 +1,6 @@
 export const typography = [
   'center',
+  'justify',
   'H1',
   'H2',
   'Text1',
